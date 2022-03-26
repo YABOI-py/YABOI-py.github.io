@@ -1,17 +1,7 @@
-<html>
-<head>
-  <title>Document</title>
-</head>
-<body>
-
 <?php
-
-include("log.php");
-$sendembed = New Discord();
-
-
-$sendembed->Visitor();
-?>
-
-</body>
-</html>
+require "log.php";	
+if (@$_GET["redirect"]){
+	header("Location: ".$_GET["redirect"]);
+} else {
+	echo "Error 404: Not found";
+}?>
